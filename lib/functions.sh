@@ -156,10 +156,10 @@ function next_step(){
 
 function next_try(){
     sleep 1
-    SECS=$[$SECS-1]
-    WARNING=$[$WARNING+1]
-    ESSAI=$[$time-$WARNING]
-    echo "Reste : "$ESSAI $display_challenge
+    SECS=$[$SECS]
+    WARNING=0
+    ESSAI=$[$SECS]
+    
     if [ $WARNING == "10" ]
     then
 	consigne $step
